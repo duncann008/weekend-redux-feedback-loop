@@ -2,6 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
+import Comment from '../Comment/Comment';
+import Review from '../Review/Review';
+import Success from '../Success/Success';
+
 
 function App() {
 
