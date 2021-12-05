@@ -44,13 +44,30 @@ function Support()  {
 
             <form onSubmit={(event) => onButtonClick(event)}>
       
-            <input onChange={(event) => selectValue(event)} type="radio" id="1" name="support" value="1"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="2" name="support" value="2"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="3" name="support" value="3"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="4" name="support" value="4"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="5" name="support" value="5"/>
+            <div id="checkboxes">
+                <div class="checkboxgroup">
+                    <label for="1">1</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="1" name="support" value="1"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="2">2</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="2" name="support" value="2"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="3">3</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="3" name="support" value="3"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="4">4</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="4" name="support" value="4"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="5">5</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="5" name="support" value="5"/>
+                </div>
+            </div>
 
-            <button>NEXT</button>
+            <button className="radio">NEXT</button>
 
             </form>
         </div>

@@ -24,3 +24,5 @@ A reflection/feedback form that allows for data from each view to be saved to a 
 4.  The last step was to make my POST route work.
     - Added a reducer to contain properties for each page's value that was set via state on each component.
     - Wired up a POST route on the server and on Review.jsx to work with my submission.
+
+5.  Had to revist to add a smidge of styling and add conditionals to only accept a selected option on the radio buttons.

@@ -4,8 +4,22 @@ body {
   font-family: sans-serif;
 }
 
-ul  {
-  list-style-type: none;
-  padding: 0;
+.checkboxgroup {
+  display: inline-block;
+  text-align: center;
+  padding-inline: 10px;
 }
+.checkboxgroup label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.radio  {
+  margin-top: 3%;
+}
+
+input[type='radio'] { 
+  transform: scale(2); 
+}
+
 

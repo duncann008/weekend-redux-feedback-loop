@@ -43,14 +43,31 @@ function Feeling()  {
         <div>
             <h1>How are you feeling today?</h1>
             <form onSubmit={(event) => onButtonClick(event)}>
-      
-            <input onChange={(event) => selectValue(event)} type="radio" id="1" name="feeling" value="1"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="2" name="feeling" value="2"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="3" name="feeling" value="3"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="4" name="feeling" value="4"/>
-            <input onChange={(event) => selectValue(event)} type="radio" id="5" name="feeling" value="5"/>
 
-            <button>NEXT</button>
+            <div id="checkboxes">
+                <div class="checkboxgroup">
+                    <label for="1">1</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="1" name="feeling" value="1"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="2">2</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="2" name="feeling" value="2"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="3">3</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="3" name="feeling" value="3"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="4">4</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="4" name="feeling" value="4"/>
+                </div>
+                <div class="checkboxgroup">
+                    <label for="5">5</label>
+                    <input onChange={(event) => selectValue(event)} type="radio" id="5" name="feeling" value="5"/>
+                </div>
+            </div>
+
+            <button className="radio">NEXT</button>
 
             </form>
         </div>
