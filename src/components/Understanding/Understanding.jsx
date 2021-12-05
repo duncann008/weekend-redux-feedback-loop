@@ -19,14 +19,21 @@ function Understanding()  {
     }
     // Dispatches the state to the reducer as a property of an object and its value, then routes to /Support
     const onButtonClick = (event) => {
-        event.preventDefault();
-        dispatch({
-            type: 'SET_UNDERSTANDING',
-            payload: valueToAdd
-        });
         
-        history.push('/Support');
+        event.preventDefault();
 
+        if (valueToAdd.understanding > 0)   {
+            dispatch({
+                type: 'SET_UNDERSTANDING',
+                payload: valueToAdd
+            });
+            
+            history.push('/Support');
+            }
+        else    {
+            alert('Please select a value.');
+            return;
+        }
 
     }
 

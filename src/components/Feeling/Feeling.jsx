@@ -21,14 +21,19 @@ function Feeling()  {
     // Sends the state as payload to our reducer as a property of an object then routes to /Understanding
     const onButtonClick = (event) => {
         event.preventDefault();
-        dispatch({
-            type: 'SET_FEELING',
-            payload: valueToAdd
-        });
-        
-        
-        history.push('/Understanding');
 
+        if (valueToAdd.feeling > 0) {
+            dispatch({
+                type: 'SET_FEELING',
+                payload: valueToAdd
+            });
+            
+            history.push('/Understanding');
+        }
+        else    {
+            alert('Please select a value.');
+            return;
+        }
 
     }
 
