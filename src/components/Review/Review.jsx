@@ -1,19 +1,35 @@
-import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 function Review()  {
 
 
     const reviewFeedback = useSelector(store => store.reviewFeedback);
 
-    console.log(reviewFeedback);
-
     const history = useHistory();
+
+    const postFeedback = () =>  {
+        console.log('Is this thing on?');
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data:   {
+                feeling: reviewFeedback.feeling,
+                understanding: reviewFeedback.understanding,
+                support: reviewFeedback.support,
+                comments: reviewFeedback.comments
+            }
+        }).then(response => {
+            console.log(response);
+        }).catch(error =>   {
+            console.log('POST Error:', error);
+        })
+    }
 
     const onButtonClick = (event) => {
         event.preventDefault();
-        
+        postFeedback();
         
         history.push('/Success');
     }
@@ -29,7 +45,7 @@ function Review()  {
                 <li>Comment: {reviewFeedback.comments}</li>
                     
             </ul>
-            <button onClick={(event) => onButtonClick(event)} class="middle-buttons">SUBMIT</button>
+            <button onClick={(event) => onButtonClick(event)}>SUBMIT</button>
         </div>
     )
 }
