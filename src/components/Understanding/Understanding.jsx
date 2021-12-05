@@ -10,13 +10,14 @@ function Understanding()  {
 
     const dispatch = useDispatch();
 
+    // Sets state to the radio button value
     const selectValue = (event) =>  {
         setValueToAdd({
             ...valueToAdd,
             understanding: event.target.value
         });
     }
-
+    // Dispatches the state to the reducer as a property of an object and its value, then routes to /Support
     const onButtonClick = (event) => {
         event.preventDefault();
         dispatch({

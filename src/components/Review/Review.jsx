@@ -9,6 +9,7 @@ function Review()  {
 
     const history = useHistory();
 
+    // Posts all the data as an object with the 4 states I dispatched to my reducer as the properties
     const postFeedback = () =>  {
         console.log('Is this thing on?');
         axios({
@@ -26,7 +27,8 @@ function Review()  {
             console.log('POST Error:', error);
         })
     }
-
+    
+    // Calls the post and sends us to the /Success page
     const onButtonClick = (event) => {
         event.preventDefault();
         postFeedback();

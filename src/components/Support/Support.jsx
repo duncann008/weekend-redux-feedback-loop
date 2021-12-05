@@ -10,6 +10,7 @@ function Support()  {
 
     const [valueToAdd, setValueToAdd] = useState({support: 0});
 
+    // Sets state to the radio button value
     const selectValue = (event) =>  {
         setValueToAdd({
             ...valueToAdd,
@@ -17,6 +18,7 @@ function Support()  {
         });
     }
 
+    // Dispatches the state to the reducer as a property of an object and its value, then routes to /Comment
     const onButtonClick = (event) => {
         event.preventDefault();
         dispatch({

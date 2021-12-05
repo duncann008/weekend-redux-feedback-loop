@@ -21,5 +21,6 @@ A reflection/feedback form that allows for data from each view to be saved to a 
     - Added a form with 5 radio buttons each for the first 3 views, and wired up their submit buttons to transfer to the next page.
     - To see my data in the review section, I added a table to display it.
 
-4.  The next step was to make my routes work.
-    - Add
+4.  The last step was to make my POST route work.
+    - Added a reducer to contain properties for each page's value that was set via state on each component.
+    - Wired up a POST route on the server and on Review.jsx to work with my submission.

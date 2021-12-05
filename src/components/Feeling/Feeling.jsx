@@ -10,6 +10,7 @@ function Feeling()  {
 
     const [valueToAdd, setValueToAdd] = useState({feeling: 0});
 
+    // Sets the state to the value of the clicked radio button as a property of an object and its value
     const selectValue = (event) =>  {
         setValueToAdd({
             ...valueToAdd,
@@ -17,6 +18,7 @@ function Feeling()  {
         });
     }
 
+    // Sends the state as payload to our reducer as a property of an object then routes to /Understanding
     const onButtonClick = (event) => {
         event.preventDefault();
         dispatch({

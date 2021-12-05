@@ -1,4 +1,3 @@
-import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
@@ -6,6 +5,7 @@ function Success()  {
 
     const history = useHistory();
 
+    // Routes back to /Feeling
     const onButtonClick = (event) => {
         event.preventDefault();
         

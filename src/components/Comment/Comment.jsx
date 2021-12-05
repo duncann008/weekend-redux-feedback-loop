@@ -10,6 +10,8 @@ function Comment()  {
 
     const [valueToAdd, setValueToAdd] = useState({comments: ''});
 
+
+    // Sets comment
     const selectValue = (event) =>  {
         setValueToAdd({
             ...valueToAdd,
@@ -17,6 +19,7 @@ function Comment()  {
         });
     }
 
+    // Sends comment and goes to the next page /Review
     const onButtonClick = (event) => {
         event.preventDefault();
         dispatch({
