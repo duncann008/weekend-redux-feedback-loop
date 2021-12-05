@@ -9,7 +9,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+router.get('/', (req, res) => {
+    console.log('GET /');
+    pool.query('SELECT * from "feedback";')
+    .then((result) => {
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('Error GET /', error)
+        res.sendStatus(500);
+    });
+})
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

@@ -1,6 +1,34 @@
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
+
 function Support()  {
 
+    const dispatch = useDispatch();
 
+    const history = useHistory();
+
+    const [valueToAdd, setValueToAdd] = useState({support: 0});
+
+    const selectValue = (event) =>  {
+        setValueToAdd({
+            ...valueToAdd,
+            support: event.target.value
+        });
+    }
+
+    const onButtonClick = (event) => {
+        event.preventDefault();
+        dispatch({
+            type: 'SET_SUPPORT',
+            payload: valueToAdd
+        });
+        
+        
+        history.push('/Comment');
+
+
+    }
 
     return  (
         <div>
@@ -8,11 +36,11 @@ function Support()  {
 
             <form onSubmit={(event) => onButtonClick(event)}>
       
-            <input  type="radio" id="1" name="support" value="1"/>
-            <input  type="radio" id="2" name="support" value="2"/>
-            <input  type="radio" id="3" name="support" value="3"/>
-            <input  type="radio" id="4" name="support" value="4"/>
-            <input  type="radio" id="5" name="support" value="5"/>
+            <input onChange={(event) => selectValue(event)} type="radio" id="1" name="support" value="1"/>
+            <input onChange={(event) => selectValue(event)} type="radio" id="2" name="support" value="2"/>
+            <input onChange={(event) => selectValue(event)} type="radio" id="3" name="support" value="3"/>
+            <input onChange={(event) => selectValue(event)} type="radio" id="4" name="support" value="4"/>
+            <input onChange={(event) => selectValue(event)} type="radio" id="5" name="support" value="5"/>
 
             <button>NEXT</button>
 

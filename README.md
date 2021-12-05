@@ -18,4 +18,8 @@ A reflection/feedback form that allows for data from each view to be saved to a 
     - Routes working successfully.
 
 3.  I thought to test any other functionality from here on out I should quickly add the inputs and buttons to each component.
-    - 
+    - Added a form with 5 radio buttons each for the first 3 views, and wired up their submit buttons to transfer to the next page.
+    - To see my data in the review section, I added a table to display it.
+
+4.  The next step was to make my routes work.
+    - Add
