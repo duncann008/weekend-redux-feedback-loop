@@ -4,6 +4,11 @@ body {
   font-family: sans-serif;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
 .checkboxgroup {
   display: inline-block;
   text-align: center;
